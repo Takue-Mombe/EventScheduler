@@ -20,7 +20,7 @@ public class UserConfig {
 
     @Bean
     public UserDetailsService userDetailsService(UserService userService) {
-        return username -> (UserDetails) userService
+        return (username) -> userService
                 .findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found: " + username));
     }

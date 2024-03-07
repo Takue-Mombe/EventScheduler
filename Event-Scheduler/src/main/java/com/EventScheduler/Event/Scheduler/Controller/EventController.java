@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/events")
 public class EventController {
 
-    @Autowired
+    @Autowired(required = true)
     private EventService eventService;
 
     @GetMapping
