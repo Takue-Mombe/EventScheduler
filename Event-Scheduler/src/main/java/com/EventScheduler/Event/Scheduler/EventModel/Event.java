@@ -9,8 +9,8 @@ import java.util.Date;
 
 @Setter
 @Getter
-@Entity(name = "postgres")
-@Table(name = "")
+@Entity
+@Table(name = "event")
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

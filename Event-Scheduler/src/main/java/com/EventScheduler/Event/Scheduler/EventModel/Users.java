@@ -12,8 +12,8 @@ import java.util.Date;
 
 @Setter
 @Getter
-@Entity(name = "po")
-@Table(name = "")
+@Entity
+@Table(name = "users")
 public class Users {
 
     @Id
@@ -21,7 +21,6 @@ public class Users {
     private String password;
     private String firstName;
     private String lastName;
-
     private int phoneNumber;
     private String emailAddress;
 
