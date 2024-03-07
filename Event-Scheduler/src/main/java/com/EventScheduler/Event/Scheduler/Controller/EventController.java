@@ -29,19 +29,25 @@ public class EventController {
     @Secured("ROLE_USER")
     @PostMapping
     public Event createEvent(@RequestBody Event event) {
-        return eventService.createEvent(event);
+        Event createdEvent = eventService.createEvent(event);
+        System.out.println("Event created successfully with ID: " + createdEvent.getId());
+        return createdEvent;
     }
+
 
     @Secured("ROLE_USER")
     @PutMapping("/{id}")
     public Event updateEvent(@PathVariable Long id, @RequestBody Event updatedEvent) {
-        return eventService.updateEvent(id, updatedEvent);
+        Event event = eventService.updateEvent(id, updatedEvent);
+        System.out.println("Event updated successfully with ID: " + event.getId());
+        return event;
     }
 
     @Secured("ROLE_USER")
     @DeleteMapping("/{id}")
     public void deleteEvent(@PathVariable Long id) {
         eventService.deleteEvent(id);
+        System.out.println("Event deleted successfully with ID: " + id);
     }
 }
 
