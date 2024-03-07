@@ -37,7 +37,7 @@ public class UserConfig {
         http
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .antMatchers(HttpMethod.POST, "/users/register").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/users/register").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults())
