@@ -14,7 +14,9 @@ public class UserController {
 
     @PostMapping("/register")
     public Users registerUser(@RequestBody Users user) {
-        return userService.registerUser(user);
+        Users registeredUser = userService.registerUser(user);
+        System.out.println("User registered successfully with username: " + registeredUser.getUsername());
+        return registeredUser;
     }
 
     @GetMapping("/login")
