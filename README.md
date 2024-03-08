@@ -16,7 +16,7 @@ Before running the application, make sure you have the following installed:
 
 ### Clone the repository
 ```bash
-git clone https://github.com/Takue-Mombe/event-scheduling-app.git
+git clone [https://github.com/Takue-Mombe/event-scheduling-app.git](https://github.com/Takue-Mombe/EventScheduler.git)
 cd event-scheduling-app
 ```
 
